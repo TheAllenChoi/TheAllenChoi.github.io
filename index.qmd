@@ -1,11 +1,30 @@
 ---
-title: "TheAllenChoi.github.io"
+title: "Allen Choi"
+image: selfie.jpg
+about:
+    template: solana
+    image-shape: rectangle
+    links:
+      - text: LinkedIn
+        href: https://www.linkedin.com/in/allen-choi/
+      - text: GitHub
+        href: https://github.com/TheAllenChoi
+      - text: Email
+        href: mailto:achoi48@calpoly.edu
 ---
 
-This is a Quarto website.
+**Hello! Nice to meet you!**
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+My name is Allen Choi, and I am currently a second-year student here at California Polytechnic State University - San Luis Obispo. I like to spend my time reading, learning more about statistics, and drinking boba!
 
-```{r}
-1 + 1
-```
+## Education
+
+California Polytechnic State University - San Luis Obispo
+B.S. in Statistics | 2021-2025
+
+Fairfax High School | Los Angeles
+High School Diploma | 2017-2021
+
+## Skills/Relevant Coursework
+Google Data Analytics Certificate (In Progress)
+Calculus IV, Linear Algebra, Statistical Computing in R, Statistical Computing in SAS, Data Structures, Object Oriented Programming, Methods of Proofs.
