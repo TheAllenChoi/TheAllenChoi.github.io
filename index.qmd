@@ -23,4 +23,6 @@ My name is Allen Choi, and I am currently a third-year student here at Californi
 
 ## Skills/Relevant Coursework
 
-Google Advanced Data Analytics Certificate, \ \ Statistical Computing in R, Statistical Computing in SAS, Data Structures, Object Oriented Programming, Design and Analysis of Algorithms, Probability/Sampling Theory
+Google Advanced Data Analytics Certificate, \ \ Data Structures, Object Oriented Programming, Probability Theory, Estimation
+and Sampling Theory, Design and Analysis of Algorithms, Mathematical Statistics, Applied Multivariate
+Statistics
