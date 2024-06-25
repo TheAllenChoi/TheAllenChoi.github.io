@@ -15,12 +15,12 @@ about:
 
 **Hello! Nice to meet you!**
 
-My name is Allen Choi, and I am currently a second-year student here at California Polytechnic State University - San Luis Obispo. I like to spend my time reading, learning more about statistics, and drinking boba!
+My name is Allen Choi, and I am currently a third-year student here at California Polytechnic State University - San Luis Obispo. I like to spend my time reading, learning more about statistics, and drinking boba!
 
 ## Education
 
-B.S. in Statistics, Minor in Data Science – California Polytechnic State University - San Luis Obispo \ 2021-2025
+**B.S. in Statistics, Minor in Data Science** – California Polytechnic State University - San Luis Obispo  2021-2025
 
 ## Skills/Relevant Coursework
 
-Google Data Analytics Certificate (In Progress) Calculus IV, Linear Algebra, Statistical Computing in R, Statistical Computing in SAS, Data Structures, Object Oriented Programming, Methods of Proofs.
+Google Advanced Data Analytics Certificate, \ \ Statistical Computing in R, Statistical Computing in SAS, Data Structures, Object Oriented Programming, Design and Analysis of Algorithms, Probability/Sampling Theory
