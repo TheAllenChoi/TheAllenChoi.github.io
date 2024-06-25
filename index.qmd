@@ -2,7 +2,7 @@
 title: "Allen Choi"
 image: selfie.jpg
 about:
-    template: solana
+    template: broadside
     image-shape: rectangle
     links:
       - text: LinkedIn
@@ -19,12 +19,8 @@ My name is Allen Choi, and I am currently a second-year student here at Californ
 
 ## Education
 
-California Polytechnic State University - San Luis Obispo
-B.S. in Statistics | 2021-2025
-
-Fairfax High School | Los Angeles
-High School Diploma | 2017-2021
+B.S. in Statistics, Minor in Data Science – California Polytechnic State University - San Luis Obispo \ 2021-2025
 
 ## Skills/Relevant Coursework
-Google Data Analytics Certificate (In Progress)
-Calculus IV, Linear Algebra, Statistical Computing in R, Statistical Computing in SAS, Data Structures, Object Oriented Programming, Methods of Proofs.
+
+Google Data Analytics Certificate (In Progress) Calculus IV, Linear Algebra, Statistical Computing in R, Statistical Computing in SAS, Data Structures, Object Oriented Programming, Methods of Proofs.
