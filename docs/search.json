@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Allen Choi",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 143423423423423\n\n[1] 1.434234e+14\n\n\nds"
+    "text": "Hello! Nice to meet you!\nHi! My name is Allen Choi and I am a 4th year Statistics student here at California Polytechnic State University, San Luis Obispo! I’ll also be continuing my education here for my Master’s in Statistics next year. Some of my hobbies include reading (nonfiction and fiction) as well as running and going to the gym."
   },
   {
     "objectID": "about.html",
@@ -19,5 +19,19 @@
     "title": "STAT 541 Portfolio",
     "section": "",
     "text": "No matching items"
+  },
+  {
+    "objectID": "index.html#education",
+    "href": "index.html#education",
+    "title": "Allen Choi",
+    "section": "Education",
+    "text": "Education\nB.S. in Statistics, Minor in Data Science – California Polytechnic State University, San Luis Obispo -&gt; 2021-2025\nM.S. in Statistics – California Polytechnic State University, San Luis Obispo -&gt; Expected 2026"
+  },
+  {
+    "objectID": "Resume.html",
+    "href": "Resume.html",
+    "title": "Resume",
+    "section": "",
+    "text": "{{ &lt; media/Choi_Allen_Resume-1.pdf &gt;}}"
   }
 ]

@@ -1,15 +1,23 @@
 ---
 title: "Allen Choi"
+image: media/allen_picture.png
 about:
   template: solana
+  links:
+      - text: LinkedIn
+        href: https://www.linkedin.com/in/allen-choi/
+      - text: GitHub
+        href: https://github.com/TheAllenChoi
+      - text: Email
+        href: mailto:achoi48@calpoly.edu
 ---
 
-This is a Quarto website.
+**Hello! Nice to meet you!**
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+Hi! My name is Allen Choi and I am a 4th year Statistics student here at California Polytechnic State University, San Luis Obispo! I'll also be continuing my education here for my Master's in Statistics next year. Some of my hobbies include reading (nonfiction and fiction) as well as running and going to the gym.
 
-```{r}
-1 + 143423423423423
-```
+## Education
 
-ds
+**B.S. in Statistics, Minor in Data Science** – California Polytechnic State University, San Luis Obispo -\> 2021-2025
+
+**M.S. in Statistics** – California Polytechnic State University, San Luis Obispo -\> Expected 2026

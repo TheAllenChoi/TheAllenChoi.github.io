@@ -10,12 +10,15 @@ website:
         text: Home
       - about.qmd
       - posts.qmd
+      - href: media/Choi_Allen_Resume-1.pdf
+        text: Resume
 
 format:
   html:
-    theme: cosmo
+    theme: morph
     css: styles.css
     toc: true
+    page-layout: full
 
 editor: visual
 
