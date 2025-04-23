@@ -1,5 +1,7 @@
 ---
-title: "TheAllenChoi.github.io"
+title: "Allen Choi"
+about:
+  template: solana
 ---
 
 This is a Quarto website.
@@ -7,5 +9,7 @@ This is a Quarto website.
 To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
 
 ```{r}
-1 + 1
+1 + 143423423423423
 ```
+
+ds
