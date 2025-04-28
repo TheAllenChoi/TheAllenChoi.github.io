@@ -1,6 +1,8 @@
 ---
 title: "Lab 2"
+desc: "..."
 author: "Allen Choi"
+date: 04-14-2025
 subtitle: "Advanced Data Visualization"
 format: html
 embed-resources: true
@@ -68,9 +70,9 @@ library(tidyverse)
 library(here)
 library(plotly)
 library(ggridges)
-data_dict <- readxl::read_xlsx(here("wgm2018-dataset-crosstabs-all-countries.xlsx"),
+data_dict <- readxl::read_xlsx(here("portfolio", "2024-04-13-lab-02", "wgm2018-dataset-crosstabs-all-countries.xlsx"),
                                sheet = 3)
-data <- readxl::read_xlsx(here("wgm2018-dataset-crosstabs-all-countries.xlsx"),
+data <- readxl::read_xlsx(here("portfolio", "2024-04-13-lab-02", "wgm2018-dataset-crosstabs-all-countries.xlsx"),
                                sheet = 2) |> 
   select(c(WP5, Q25, Regions_Report))
 data_dict <- data_dict[1, 3] |> 
@@ -180,7 +182,7 @@ The full Wellcome Global Monitor 2018 report can be found here: <https://wellcom
 #| label: second-improved-visualization
 library(leaflet)
 library(rnaturalearth)
-data <- readxl::read_xlsx(here("wgm2018-dataset-crosstabs-all-countries.xlsx"),
+data <- readxl::read_xlsx(here("portfolio", "2024-04-13-lab-02", "wgm2018-dataset-crosstabs-all-countries.xlsx"),
                                sheet = 2) |> 
   select(c(WP5, Q11E))
 
@@ -268,11 +270,11 @@ I would call it a stacked bar plot but normalized so that each region adds up to
 #| label: third-improved-visualization
 library(gganimate)
 library(gifski)
-data <- readxl::read_xlsx(here("wgm2018-dataset-crosstabs-all-countries.xlsx"),
+data <- readxl::read_xlsx(here("portfolio", "2024-04-13-lab-02", "wgm2018-dataset-crosstabs-all-countries.xlsx"),
                                sheet = 2) |> 
   select(c(Regions_Report, Q25))
 
-data_dict <- readxl::read_xlsx(here("wgm2018-dataset-crosstabs-all-countries.xlsx"),
+data_dict <- readxl::read_xlsx(here("portfolio", "2024-04-13-lab-02", "wgm2018-dataset-crosstabs-all-countries.xlsx"),
                                sheet = 3)
 data_dict <- data_dict[57, 3] |> 
   rename(region = `Variable Type & Codes*`) |> 
