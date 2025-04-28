@@ -1,0 +1,7 @@
+---
+title: "Lab 3"
+format: html
+---
+```{=html}
+<iframe width="1200" height = "800" src="lab3.html"></iframe>
+```

@@ -1,0 +1,8 @@
+---
+title: "Lab 4"
+format: html
+---
+
+```{=html}
+<iframe width="1500" height = "900" align="centered" src="https://theallenchoi.shinyapps.io/lab4/"></iframe>
+```
