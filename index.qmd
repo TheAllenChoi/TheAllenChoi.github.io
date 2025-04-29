@@ -4,10 +4,6 @@ image: media/allen_picture.png
 about:
   template: solana
   links:
-      - text: LinkedIn
-        href: https://www.linkedin.com/in/allen-choi/
-      - text: GitHub
-        href: https://github.com/TheAllenChoi
       - text: Email
         href: mailto:achoi48@calpoly.edu
 ---

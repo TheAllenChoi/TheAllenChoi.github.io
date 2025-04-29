@@ -12,10 +12,19 @@ website:
       - posts.qmd
       - href: media/Choi_Allen_Resume-1.pdf
         text: Resume
+    right: 
+      - icon: github
+        href: https://github.com/TheAllenChoi
+        aria-label: GitHub
+        text: GitHub
+      - icon: linkedin
+        href: https://www.linkedin.com/in/allen-choi/
+        aria-label: LinkedIn
+        text: LinkedIn
 
 format:
   html:
-    theme: morph
+    theme: lux
     css: styles.css
     toc: true
     page-layout: full
