@@ -1,7 +1,12 @@
 ---
 title: "Lab 3"
+description: "Static Dashboard"
+image: picture.png
+author: "Allen Choi"
 format: html
+date: 04-21-2025
 ---
+
 ```{=html}
-<iframe width="1200" height = "800" src="lab3.html"></iframe>
+<iframe width="1200" height = "800" src="lab3.html" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"frameborder="0"></iframe>
 ```

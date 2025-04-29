@@ -1,8 +1,12 @@
 ---
 title: "Lab 4"
+date: 04-28-2025
+author: "Allen Choi"
+image: picture.png
+description: "Interactive/Dynamic Dashboard"
 format: html
 ---
 
 ```{=html}
-<iframe width="1500" height = "900" align="centered" src="https://theallenchoi.shinyapps.io/lab4/"></iframe>
+<iframe width="1400" height = "900" src="https://theallenchoi.shinyapps.io/lab4/" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"frameborder="0"></iframe>
 ```

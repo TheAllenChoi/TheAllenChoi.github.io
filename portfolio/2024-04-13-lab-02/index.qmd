@@ -1,6 +1,7 @@
 ---
 title: "Lab 2"
-desc: "..."
+image: picture.gif
+description: "Recreating and Improving Visualization"
 author: "Allen Choi"
 date: 04-14-2025
 subtitle: "Advanced Data Visualization"
