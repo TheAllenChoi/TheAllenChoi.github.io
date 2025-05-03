@@ -3,6 +3,7 @@ title: "Allen Choi"
 image: media/allen_picture.png
 about:
   template: solana
+  image-width: 20em
   links:
       - text: Email
         href: mailto:achoi48@calpoly.edu
@@ -14,6 +15,10 @@ Hi! My name is Allen Choi and I am a 4th year Statistics student here at Califor
 
 ## Education
 
-**B.S. in Statistics, Minor in Data Science** – California Polytechnic State University, San Luis Obispo -\> 2021-2025
+**B.S. in Statistics, Minor in Data Science** (2021-2025)
 
-**M.S. in Statistics** – California Polytechnic State University, San Luis Obispo -\> Expected 2026
+-   California Polytechnic State University, San Luis Obispo
+
+**M.S. in Statistics** (2025-2026)
+
+-   California Polytechnic State University, San Luis Obispo

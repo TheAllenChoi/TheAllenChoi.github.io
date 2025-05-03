@@ -2,7 +2,7 @@
 title: "Lab 1 - Quarto Warmup & STAT 331 Review"
 author: "Allen Choi"
 image: picture.png
-date: 04-07-2022
+date: 04-07-2025
 description: "Review of ggplot2, quarto, and dplyr"
 format: html
 embed-resources: true
