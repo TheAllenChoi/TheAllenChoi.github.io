@@ -1,0 +1,186 @@
+---
+title: "Lab 9: Generative Art"
+description: "Allen Choi's Artwork"
+author: "Allen Choi"
+date: 06-02-2025
+format:
+  html:
+    code-fold: true
+    code-summary: "Show / Hide"
+    code-overflow: wrap
+    toc: true
+embed-resources: true
+editor: source
+---
+
+# Required Libraries
+
+```{r}
+#| warning: false
+#| message: false
+library(tidyverse)
+library(tibble)
+library(scales)
+library(ggthemes)
+library(rayshader)
+library(ambient)
+library(tictoc)
+```
+
+# The Sun
+
+```{r}
+# set seed for consistency across sessions
+set.seed(541)
+
+# additional random changes across all variables in dataframe
+attitude_2 <- attitude |> 
+  rbind(attitude |> 
+          mutate(across(everything(), ~ (.x * rnorm(nrow(attitude), 0, 1))))) |> 
+  rbind(attitude |> 
+          mutate(across(everything(), ~ (.x * rnorm(nrow(attitude), 0, 0.1))))) |> 
+  rbind(attitude |> 
+          mutate(across(everything(), ~ (.x * rnorm(nrow(attitude), 0, 0.01)))))
+
+
+# standardization and more random changes to make lines more random
+attitude_2 <- attitude_2 |> 
+  rbind(attitude_2 |> 
+          mutate(across(everything(), ~ (.x * rnorm(nrow(attitude), 0, .1))))
+  ) |> 
+  mutate(across(everything(), ~ (.x * -1))) |> # rotate
+  mutate(across(everything(), ~ (.x - max(.x)))) # standardize
+
+
+# creation of the artwork
+attitude_2 |> 
+  ggplot(aes(x = rating, 
+             xend = raises,
+             yend = advance,
+             y = complaints,
+             color = privileges,
+             linewidth = critical)) +
+  geom_segment(show.legend = FALSE) +
+  coord_polar() +
+  scale_color_gradientn(colours = c("red", "orange", "yellow")) +
+  theme_void() +
+  theme(panel.background = element_rect(fill = "black"),
+        plot.background = element_rect(fill = "black"))
+
+```
+
+## Museum Description
+
+The sun has always been a part of humanity's history, and its no wonder why we find sunsets so soothing to the soul. Thus, this art piece is meant to replicate the feeling of a peaceful end to the day, and the wonder of the beginning of the night.
+
+## Code Choices
+
+The extra rows created from rbind are meant to create "layers" on the sun, and the multiplication by -1 is meant to rotate the image to make it more presentable. The standardization is meant to condense all of the lines together so that it forms a more cohesive image.
+
+# Disease
+
+```{r}
+## The code is from https://art-from-code.netlify.app/day-1/session-4/
+sample_canva2 <- function(seed = NULL, n = 4) {
+  
+  if(!is.null(seed)) set.seed(seed)
+  sample(ggthemes::canva_palettes, 1)[[1]] |>
+    (\(x) colorRampPalette(x)(n))()  
+}
+
+transform_to_curl_space <- function(x, y, frequency = 6, octaves = 10) {
+  curl_noise(
+    generator = fracture,
+    noise = gen_simplex,
+    fractal = fbm,
+    octaves = octaves,
+    frequency = frequency,
+    x = x,
+    y = y
+  )
+}
+
+
+define_worley_cells <- function(x, y, frequency = 2, octaves = 6) {
+  fracture(
+    noise = gen_worley,
+    fractal = billow,
+    octaves = octaves,
+    frequency = frequency,
+    value = "cell",
+    x = x,
+    y = y
+  ) |>
+    rank() |> 
+    normalise()
+}
+
+simplex_noise <- function(x, y, frequency = .085, octaves = 10) {
+  fracture(
+    noise = gen_simplex,
+    fractal = ridged,
+    octaves = octaves,
+    frequency = frequency,
+    x = x,
+    y = y
+  ) |>
+    normalise()
+}
+
+ice_floe <- function(seed) {
+
+  set.seed(seed)
+  
+  grid <- long_grid(
+    x = seq(0, 1, length.out = 2000),
+    y = seq(0, 1, length.out = 2000)
+  )
+  
+  coords <- transform_to_curl_space(grid$x, grid$y)
+  
+  grid |>
+    mutate(
+      cells = define_worley_cells(coords$x, coords$y),
+      paint = simplex_noise(x + cells, y + cells),
+      paint = normalise(paint)
+    ) |>
+    as.array(value = paint)
+}
+
+
+shaded_ice_floe <- function(seed) {
+  
+  art <- ice_floe(seed)
+  
+  height_shade(
+    heightmap = art,
+    texture = sample_canva2(seed, 4)
+  ) |>
+    add_shadow(
+      shadowmap = ray_shade(
+        heightmap = art, 
+        sunaltitude = 60, 
+        sunangle = 135,
+        multicore = TRUE, 
+        zscale = .005
+      ), 
+      max_darken = 0.01
+    ) |>
+    plot_map()
+}
+
+shaded_ice_floe(12345)
+```
+
+## Museum Description
+
+The sickly spread of the disease from the left-hand corner infiltrates the healthy cells, spreading chaos and despair among the cells still remaining. The cancer is almost moving in a insidious manner, spreading its tendrils to capture the rest of the cells.
+
+## Code Choices
+
+-   Changed the frequency and octaves which changed the size of the "cell walls"
+-   The sun angle I chose as 135 for the light to come from the bottom right Sun altitude maybe 60 for the light to come at an angle since there were too many "mountains" in the way
+-   Made the transform to curl space have a high frequency to generate more "cells"
+-   Made the worley noise to 2 since it seemed to generate the area within the cells, and I chose a good middle ground between too much "noise" within each cell and not too much noise.
+-   Limited the number of colors to 4 in order to make it more minimalistic.
+-   The simplex noise seems to affect the height, so I wanted something with more valleys by making the frequency lower to 0.085.
