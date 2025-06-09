@@ -4984,7 +4984,7 @@ vertical-align: -.125em;
 <details open class="code-fold">
 <summary>Click to hide/show the code</summary>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Helper function to extract certain attributes</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>get_text_from_page <span class="ot">&lt;-</span> <span class="cf">function</span>(page, css_selector) {</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>text_page_helper <span class="ot">&lt;-</span> <span class="cf">function</span>(page, css_selector) {</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    </span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  page <span class="sc">%&gt;%</span></span>
 <span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">html_elements</span>(css_selector) <span class="sc">%&gt;%</span></span>
@@ -5002,11 +5002,11 @@ vertical-align: -.125em;
 <span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>    page <span class="ot">&lt;-</span> <span class="fu">read_html</span>(cheese_url)</span>
 <span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>    </span>
 <span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Grab elements from the page</span></span>
-<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>    milk_info <span class="ot">&lt;-</span> <span class="fu">get_text_from_page</span>(page, <span class="st">&quot;.summary_milk p&quot;</span>)</span>
-<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>    country_of_origin <span class="ot">&lt;-</span> <span class="fu">get_text_from_page</span>(page, <span class="st">&quot;.summary_country p&quot;</span>)</span>
-<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>    family <span class="ot">&lt;-</span> <span class="fu">get_text_from_page</span>(page, <span class="st">&quot;.summary_family p&quot;</span>)</span>
-<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>    type <span class="ot">&lt;-</span> <span class="fu">get_text_from_page</span>(page, <span class="st">&quot;.summary_moisture_and_type p&quot;</span>)</span>
-<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>    flavour <span class="ot">&lt;-</span> <span class="fu">get_text_from_page</span>(page, <span class="st">&quot;.summary_taste p&quot;</span>)</span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>    milk_info <span class="ot">&lt;-</span> <span class="fu">text_page_helper</span>(page, <span class="st">&quot;.summary_milk p&quot;</span>)</span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>    country_of_origin <span class="ot">&lt;-</span> <span class="fu">text_page_helper</span>(page, <span class="st">&quot;.summary_country p&quot;</span>)</span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>    family <span class="ot">&lt;-</span> <span class="fu">text_page_helper</span>(page, <span class="st">&quot;.summary_family p&quot;</span>)</span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>    type <span class="ot">&lt;-</span> <span class="fu">text_page_helper</span>(page, <span class="st">&quot;.summary_moisture_and_type p&quot;</span>)</span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>    flavour <span class="ot">&lt;-</span> <span class="fu">text_page_helper</span>(page, <span class="st">&quot;.summary_taste p&quot;</span>)</span>
 <span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>    </span>
 <span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Put page elements into a dataframe</span></span>

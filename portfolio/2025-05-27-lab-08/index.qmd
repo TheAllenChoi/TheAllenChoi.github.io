@@ -154,7 +154,7 @@ for (page in pages) {
 
 ```{r}
 # Helper function to extract certain attributes
-get_text_from_page <- function(page, css_selector) {
+text_page_helper <- function(page, css_selector) {
     
   page %>%
     html_elements(css_selector) %>%
@@ -172,11 +172,11 @@ scrape_page <- function(cheese_url) {
     page <- read_html(cheese_url)
     
     # Grab elements from the page
-    milk_info <- get_text_from_page(page, ".summary_milk p")
-    country_of_origin <- get_text_from_page(page, ".summary_country p")
-    family <- get_text_from_page(page, ".summary_family p")
-    type <- get_text_from_page(page, ".summary_moisture_and_type p")
-    flavour <- get_text_from_page(page, ".summary_taste p")
+    milk_info <- text_page_helper(page, ".summary_milk p")
+    country_of_origin <- text_page_helper(page, ".summary_country p")
+    family <- text_page_helper(page, ".summary_family p")
+    type <- text_page_helper(page, ".summary_moisture_and_type p")
+    flavour <- text_page_helper(page, ".summary_taste p")
 
     
     # Put page elements into a dataframe

@@ -90,7 +90,6 @@ remove_outliers <- function(df, ..., sd_thresh = 3) {
 }
 ```
 
-
 ## Testing Your Function!
 
 ```{r}
