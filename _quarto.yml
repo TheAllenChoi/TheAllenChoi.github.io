@@ -10,7 +10,7 @@ website:
         text: Home
       - about.qmd
       - posts.qmd
-      - href: media/Choi_Allen_CV.pdf
+      - href: media/Choi_Allen_Resume.pdf
         text: Resume
     right: 
       - icon: github
